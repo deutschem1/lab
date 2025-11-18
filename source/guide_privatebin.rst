@@ -40,12 +40,12 @@ All relevant legal information can be found in the Github_ repository of the pro
 Prerequisites
 =============
 
-We're using :manual:`PHP <lang-php>` in the stable version 8.1:
+We're using :manual:`PHP <lang-php>` in the stable version 8.3:
 
 ::
 
  [isabell@stardust ~]$ uberspace tools version show php
- Using 'PHP' version: '8.1'
+ Using 'PHP' version: '8.3'
  [isabell@stardust ~]$
 
 
@@ -70,12 +70,12 @@ Then ``cd`` to your ``~/html`` folder and use ``wget`` to download it.
  [isabell@stardust ~]$ PBIN_VERSION=0.0.0
  [isabell@stardust html]$ wget https://github.com/PrivateBin/PrivateBin/archive/$PBIN_VERSION.tar.gz -O "PrivateBin-$PBIN_VERSION.tar.gz"
  […]
- Saving to: ‘PrivateBin-1.5.1.tar.gz’
+ Saving to: ‘PrivateBin-2.0.3.tar.gz’
 
  100%[=================================================>] 3,172,029   3.45MB/s   in 0.9s
 
- 2022-11-17 16:27:44 (8.32 MB/s) - ‘PrivateBin-1.5.1.tar.gz’ saved [523648]
- [isabell@stardust html]$
+ 2025-11-17 16:27:44 (8.32 MB/s) - ‘PrivateBin-2.0.3.tar.gz’ saved [786810]
+ [iabell@stardust html]$
 
 Untar the archive and then delete it.
 
@@ -235,7 +235,7 @@ Backup your config:
  [isabell@stardust html]$ cp -rp ~/privatebin/ ~/privatebin-backup
  [isabell@stardust html]$
 
-Then repeat the steps of the :lab_anchor:`Installation chapter <guide_privatebin.html#installation>`.
+Then principally repeat the steps of the :lab_anchor:`Installation chapter <guide_privatebin.html#installation>` but doublecheck (for example "mv -t ~/privatebin cfg/ lib/ tpl/ vendor/")
 Your configuration file won't get overwritten.
 
 Check the Release-Notes if the configuration changed between ``cfg/conf.sample.php`` and your ``conf.php``.
@@ -251,6 +251,6 @@ Also check ``.htaccess.disabled`` if further adjustments needed to be made.
 
 ----
 
-Tested with PrivateBin 1.5.1, Uberspace 7.15.1, PHP 8.1
+Tested with PrivateBin 2.0.3, Uberspace 7.16.9, PHP 8.3.8
 
 .. author_list::
